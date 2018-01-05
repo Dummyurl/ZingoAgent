@@ -15,7 +15,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ScrollView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -30,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
     ListView navBarListView;
     DrawerLayout drawer;
 
+    EditText search_editText,budget_et;
+    ScrollView scrollView_app_home;
+    ImageView image_city_background;
+    TextView cin_date_tv,cout_date_tv,cin_time_tv,cout_time_tv,cin_day_tv,cout_day_tv;
+    ImageButton location_button;
+    Button search_button;
+    Spinner madult,mchild;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +54,23 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Search");
 
         navBarListView = (ListView) findViewById(R.id.navbar_list);
+
+        scrollView_app_home = (ScrollView)findViewById(R.id.scrollview_app_home);
+        image_city_background = (ImageView)findViewById(R.id.image_city_background);
+
+        search_editText = (EditText)findViewById(R.id.search_editText);
+        budget_et = (EditText)findViewById(R.id.budget_et);
+
+        madult = (Spinner)findViewById(R.id.adult_count);
+        mchild = (Spinner)findViewById(R.id.child_count);
+        cin_date_tv = (TextView)findViewById(R.id.cin_date_tv);
+        cout_date_tv = (TextView)findViewById(R.id.cout_date_tv);
+        cin_time_tv = (TextView)findViewById(R.id.cin_time_tv);
+        cout_time_tv = (TextView)findViewById(R.id.cout_time_tv);
+        cin_day_tv = (TextView)findViewById(R.id.cin_day_tv);
+        cout_day_tv = (TextView)findViewById(R.id.cout_day_tv);
+        location_button = (ImageButton)findViewById(R.id.location_button);
+        search_button = (Button)findViewById(R.id.search_button_api);
 
 
 
