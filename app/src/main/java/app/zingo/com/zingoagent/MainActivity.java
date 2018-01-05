@@ -14,6 +14,8 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -52,6 +54,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Timer;
 
 import app.zingo.com.zingoagent.Adapter.NavigationListAdapter;
 import app.zingo.com.zingoagent.Model.NavBarItems;
@@ -133,25 +136,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         setUpNavigationDrawer();
 
-        //Google Place Auto Complete
-
-        search_editText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent =
-                            new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_FULLSCREEN)
-                                    .build(MainActivity.this);
-                    startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
-
-                } catch (GooglePlayServicesRepairableException e) {
-                    e.printStackTrace();
-                } catch (GooglePlayServicesNotAvailableException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
         //Get current date,day,time and set
         long date = System.currentTimeMillis();
 
@@ -219,6 +203,28 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }
         });
 
+
+        //Google Place Auto Complete
+
+        search_editText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent =
+                            new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_FULLSCREEN)
+                                    .build(MainActivity.this);
+                    startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
+
+                } catch (GooglePlayServicesRepairableException e) {
+                    e.printStackTrace();
+                } catch (GooglePlayServicesNotAvailableException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+
         location_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -259,6 +265,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         });
 
     }
+
 
     public void getAddress()
     {
@@ -352,6 +359,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             intent.putExtra("Duration",duration);
             System.out.println("Duration==="+duration);
             startActivity(intent);*/
+
+            Intent intent = new Intent(getApplicationContext(),HotelList.class);
+            startActivity(intent);
 
         }
 

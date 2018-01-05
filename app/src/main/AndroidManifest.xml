@@ -29,13 +29,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB4Ehpk9lt3IvZOQFa_zdDYp0ScZY3NByA" />
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HotelList"></activity>
     </application>
 
 </manifest>

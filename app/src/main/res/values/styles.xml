@@ -18,6 +18,44 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+        name="MyTabLayoutTextAppearance">
+
+    <item name="android:textSize">14.0sp</item>
+
+    <item name="android:textStyle">normal</item>
+
+    <item name="android:fontFamily">sans-serif-medium</item>
+
+</style>
+
+    <style parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" name="ActionBar.TitleText">
+
+    <item name="android:textSize">16.0sp</item>
+
+    <item name="android:textColor">@color/balck_38_opacity</item>
+
+    <item name="android:fontFamily">sans-serif</item>
+
+</style>
+
+    <style parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" name="Actionbar.SubTitleText">
+
+    <item name="android:textSize">12.0sp</item>
+
+    <item name="android:textStyle">normal</item>
+
+    <item name="android:textColor">@color/balck_38_opacity</item>
+
+    <item name="android:fontFamily">sans-serif-light</item>
+
+</style>
+
+    <style name="YatraHeaderBar">
+
+<item name="android:background">@color/colorPrimary</item>
+
+</style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
