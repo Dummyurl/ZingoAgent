@@ -595,6 +595,8 @@
 
     <color name="bg_card_home">#E35656</color>
 
+    <color name="md_black_1000">#000</color>
+
     <color name="zoom_toolbar">#ff323a44</color>
 
     <color name="zoom_toolbar_87_opacity">#e6323a44</color>

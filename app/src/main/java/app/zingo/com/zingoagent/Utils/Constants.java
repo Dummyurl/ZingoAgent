@@ -10,4 +10,6 @@ public class Constants {
     public static final String USER_ID = "user_id";
     public static final String HOTEL_ID = "hotel_id";
 
+    public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 123;
+
 }

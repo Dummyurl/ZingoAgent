@@ -34,8 +34,16 @@
         <item>9 Child</item>
     </string-array>
 
+    <string-array name="context_view">
+        <item>Voter Id</item>
+        <item>Adhar Card</item>
+        <item>Driving Licence</item>
+        <item>PAN Card</item>
+        <item>Employee Card</item>
+    </string-array>
+
     <array name="navbar_images">
-        <item>@drawable/settings</item>
+        <item>@drawable/user_profile</item>
         <item>@drawable/settings</item>
         <item>@drawable/settings</item>
         <item>@drawable/settings</item>

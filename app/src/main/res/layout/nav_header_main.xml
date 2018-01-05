@@ -19,9 +19,9 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_profile"
-            android:layout_width="@dimen/profile_width"
-            android:layout_height="@dimen/profile_height"
-            android:src="@drawable/zingo_image_one"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/vit_logo_pic"
              />
 
         <TextView
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:text="Zingo"
+            android:text="VIT"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="zingohotels.com"/>
+            android:text="www.vit.ac.in"/>
 
     </LinearLayout>
 
