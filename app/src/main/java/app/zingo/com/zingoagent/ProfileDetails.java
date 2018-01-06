@@ -7,29 +7,31 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.WindowManager;
+import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import app.zingo.com.zingoagent.Fragments.HomeStayFragment;
-import app.zingo.com.zingoagent.Fragments.HotelFragment;
+import app.zingo.com.zingoagent.Fragments.DocumentFragment;
+import app.zingo.com.zingoagent.Fragments.ProfileInfoFragment;
 
-public class HotelList extends AppCompatActivity {
+public class ProfileDetails extends AppCompatActivity {
 
+    private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hotel_list);
+        setContentView(R.layout.activity_profile_details);
 
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle("Hotel List");
+        setTitle("User Profile");
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -40,8 +42,8 @@ public class HotelList extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new HotelFragment(), "ALL HOTELS");
-        adapter.addFragment(new HomeStayFragment(), "HOMESTAYS");
+        adapter.addFragment(new ProfileInfoFragment(), "My Profile");
+        adapter.addFragment(new DocumentFragment(), "My Document");
         viewPager.setAdapter(adapter);
     }
 

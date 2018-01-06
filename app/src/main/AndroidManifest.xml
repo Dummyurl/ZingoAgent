@@ -38,11 +38,9 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".HotelList"></activity>
-
-        <activity
-            android:name=".Profile"
-            android:screenOrientation="portrait" />
+        <activity android:name=".HotelList" />
+        <activity android:name=".ProfileDetails"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

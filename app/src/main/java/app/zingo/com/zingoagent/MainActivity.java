@@ -57,7 +57,6 @@ import java.util.List;
 import java.util.Timer;
 
 import app.zingo.com.zingoagent.Adapter.NavigationListAdapter;
-import app.zingo.com.zingoagent.Fragments.ProfileFragment;
 import app.zingo.com.zingoagent.Model.NavBarItems;
 import app.zingo.com.zingoagent.Utils.LocationHelper;
 
@@ -351,6 +350,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             budget_et.requestFocus();
         }else{
 
+            System.out.println("Location==="+location);
+
           /*  postSearch();
             dateCal();
             Intent intent = new Intent(getApplicationContext(),HotelListActivity.class);
@@ -558,7 +559,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         {
             case 0:
                // Toast.makeText(this, "Need to Add", Toast.LENGTH_SHORT).show();
-                Intent userProfileIntent = new Intent(MainActivity.this,Profile.class);
+                Intent userProfileIntent = new Intent(MainActivity.this,ProfileDetails.class);
                 startActivity(userProfileIntent);
                 break;
 
