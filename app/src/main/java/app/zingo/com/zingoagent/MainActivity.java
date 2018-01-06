@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         //Google Place Auto Complete
 
-        search_editText.setOnClickListener(new View.OnClickListener() {
+       /* search_editText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
@@ -221,10 +221,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     e.printStackTrace();
                 }
             }
-        });
+        });*/
 
 
-
+/*
         location_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -246,7 +246,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
 
             }
-        });
+        });*/
 
         if (locationHelper.checkPlayServices()) {
 

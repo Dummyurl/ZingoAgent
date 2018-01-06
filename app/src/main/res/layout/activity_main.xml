@@ -99,10 +99,11 @@
                             android:drawableLeft="@drawable/ic_search_black_24dp"
                             android:hint="City,Locality or Stay"
                             android:layout_weight="1"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
                             android:background="@android:color/transparent"
                             android:inputType="textVisiblePassword"/>
+
+                        <!-- android:focusable="false"
+                         android:focusableInTouchMode="false"-->
                         <ImageButton android:id="@+id/location_button"
                             android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
